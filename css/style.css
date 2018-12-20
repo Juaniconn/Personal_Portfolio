@@ -1,7 +1,9 @@
+/* fonts and background-colors */
 body{
  margin: 0 auto;
+ font-family: "Source Sans Pro", sans-serif;
 }
-                    /* fonts and background-colors */
+
 h1, h2, h3, h4, h5, h6{
   font-family: "Fjalla One", sans-serif;
 }
@@ -10,9 +12,13 @@ header, .hero{
   background-color: #2C2C2C;
 }
 
+.certificates{
+  background-color: #3C6E71;
+}
+
                     /* flex */
 
-.header{
+.header, .certificates_div{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,8 +30,16 @@ header, .hero{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
   flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+.certificates{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
                     /* header */
 
@@ -100,4 +114,20 @@ header, .hero{
   width: 500px;
   height: 550px;
   object-fit: cover;
+}
+
+.certificates h2{
+  font-size: 50px;
+  color: white;
+}
+
+.certificates_div figure{
+  margin: 0px;
+  padding: 25px;
+  height: 425px;
+  width: 550px;
+}
+
+.certificates_div figure img{
+  box-shadow: 3px 5px 33px #343434;
 }
