@@ -16,9 +16,17 @@ header, .hero{
   background-color: #3C6E71;
 }
 
+.contact{
+  background-color: #C6C6C6;
+}
+
+.footer{
+  background-color: #284B63;
+}
+
                     /* flex */
 
-.header, .certificates_div, .projects_div{
+.header, .certificates_div, .projects_div, .footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,12 +42,22 @@ header, .hero{
   /* flex-wrap: wrap; */
 }
 
-.certificates, .projects{
+.certificates, .projects, .form{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.container{
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+  flex-wrap: inherit;
+  width: 1200px;
+  margin: 0 auto;
 }
                     /* header */
 .header{
@@ -227,4 +245,92 @@ margin: 50px 0px;
   border: 1px solid;
   border-radius: 10px;
   margin-bottom: 25px;
+}
+
+                    /* contact */
+.form h3{
+  margin: 50px auto 0px;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.form_box{
+  margin: 10px 0px;
+  padding-left: 30px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position-x: 5px;
+  width: 200px;
+  height: 35px;
+  /* border: 1px solid gray; */
+}
+
+.form_button{
+  background-color: transparent;
+  margin-top: 10px;
+  color: #2F2F2F;
+  padding: 5px 10px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.form_name{
+  background-image: url(../images/svg/profile.svg);
+}
+
+.form_email{
+  background-image: url(../images/svg/envelope.svg);
+}
+
+.social_link{
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: 100px 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.social{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.twitter{
+  background-image: url(../images/svg/twitter-logo.svg);
+}
+.github{
+  background-image: url(../images/svg/github-logo.svg);
+}
+.instagram{
+  background-image: url(../images/svg/instagram-logo.svg);
+}
+.linkedin{
+  background-image: url(../images/svg/linkedin-logo.svg);
+}
+
+.footer p{
+  margin: 5px 0px;
+  font-size: 20px;
+  color: white;
+}
+
+.footer p img{
+  vertical-align: middle;
+}
+
+.thanks{
+  text-align: right;
+}
+
+.author_link{
+  color: #D1D1D1;
+  text-decoration: none;
 }
