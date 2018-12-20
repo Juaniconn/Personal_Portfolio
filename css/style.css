@@ -210,6 +210,7 @@ overflow: hidden;
 width: 500px;
 background-color: #F1F1F1;
 margin: 50px 0px;
+box-shadow: 3px 5px 33px #343434;
 /* height: 700px; */
 }
 
