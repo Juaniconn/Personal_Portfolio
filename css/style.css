@@ -116,16 +116,18 @@ header, .hero{
   object-fit: cover;
 }
 
-.certificates h2{
-  font-size: 50px;
-  color: white;
-}
 
                     /* certificates */
 
+.certificates h2{
+  margin: 50px 0px 0px 0px;
+  font-size: 80px;
+  color: white;
+}
+
 .certificates_div figure{
-  margin: 0px;
-  padding: 25px;
+  margin: 50px 0px;
+  /* padding: 25px; */
   height: 425px;
   width: 550px;
 }
@@ -136,6 +138,7 @@ header, .hero{
 
                     /* projects */
 .projects h2{
+  color: #3C6E71;
   font-size: 80px;
   text-align: center;
   margin: 50px 0px 0px 0px;
