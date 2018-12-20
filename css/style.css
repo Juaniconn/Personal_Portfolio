@@ -56,7 +56,7 @@ header, .hero{
   align-items: inherit;
   flex-direction: inherit;
   flex-wrap: inherit;
-  width: 1200px;
+  width: 80%;
   margin: 0 auto;
 }
                     /* header */
@@ -210,7 +210,6 @@ overflow: hidden;
 width: 500px;
 background-color: #F1F1F1;
 margin: 50px 0px;
-box-shadow: 3px 5px 33px #343434;
 /* height: 700px; */
 }
 
@@ -332,6 +331,6 @@ box-shadow: 3px 5px 33px #343434;
 }
 
 .author_link{
-  color: #D1D1D1;
+  color: #D1D1D1 !important;
   text-decoration: none;
 }
