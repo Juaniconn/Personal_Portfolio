@@ -42,6 +42,9 @@ header, .hero{
   flex-wrap: wrap;
 }
                     /* header */
+.header{
+  border-bottom: 20px double white;
+}
 
 .header_div{
   width: 230px;
