@@ -18,7 +18,7 @@ header, .hero{
 
                     /* flex */
 
-.header, .certificates_div{
+.header, .certificates_div, .projects_div{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@ header, .hero{
   /* flex-wrap: wrap; */
 }
 
-.certificates{
+.certificates, .projects{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +121,8 @@ header, .hero{
   color: white;
 }
 
+                    /* certificates */
+
 .certificates_div figure{
   margin: 0px;
   padding: 25px;
@@ -130,4 +132,93 @@ header, .hero{
 
 .certificates_div figure img{
   box-shadow: 3px 5px 33px #343434;
+}
+
+                    /* projects */
+.projects h2{
+  font-size: 80px;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+}
+
+.project_div{
+  margin: 0px;
+  width: 500px;
+  height: 250px;
+  background-position: center;
+  display: inline-block;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  background-position: top;
+  background-color: #2C333C;
+}
+
+.project_amd_logo{
+  background-image: url(../images/amd_logo.png);
+  background-size: 737.5px 528px;
+  background-position-y: -140px;;
+}
+
+.project_web_developer_platzi_logo{
+  background-image: url(../images/web_developer_platzi_logo.png);
+  background-size: 368.75px 264px;
+  background-position-y: -20px;
+}
+
+.project_github_logo{
+  background-image: url(../images/github_logo.png);
+  background-size: 368.75px 264px;
+}
+
+.projects_div{
+  margin: 0px auto;
+  width: auto;
+  align-items: flex-start;
+
+  /* height: 250px; */
+  /* background-color: #2C333C; */
+}
+
+.project_section{
+border-radius: 15px;
+overflow: hidden;
+width: 500px;
+background-color: #F1F1F1;
+margin: 50px 0px;
+/* height: 700px; */
+}
+
+.project_info{
+  background-color: white;
+  height: 280px;
+  margin: 0px 35px 30px 35px;
+  margin-top: -50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project_info h3{
+  font-weight: normal;
+  margin: 25px 0px 0px 0px;
+  font-size: 22px;
+}
+
+.project_info p{
+  text-align: left;
+  font-size: 20px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.project_info a{
+  text-decoration: none;
+  color: #009FFD;
+  padding: 5px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: 25px;
 }
