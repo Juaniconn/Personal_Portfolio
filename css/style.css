@@ -1,12 +1,14 @@
 body{
  margin: 0 auto;
 }
-
-header, header{
-  background-color: #353535;
+                    /* fonts and background-colors */
+h1, h2, h3, h4, h5, h6{
+  font-family: "Fjalla One", sans-serif;
 }
 
-
+header, .hero{
+  background-color: #2C2C2C;
+}
 
                     /* flex */
 
@@ -18,6 +20,13 @@ header, header{
   flex-direction: row;
 }
 
+.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+}
                     /* header */
 
 .header_div{
@@ -27,7 +36,7 @@ header, header{
 
 .logo{
   background-image: url(../images/logo.png);
-  background-size: 200px 50px;
+  background-size: 200px 30px;
   background-repeat: no-repeat;
   background-position: center;
   width: 200px;
@@ -54,4 +63,41 @@ header, header{
   color: white;
   font-size: 20px;
   text-decoration: none;
+}
+
+                    /* hero */
+
+.hero h1{
+  width: 770px;
+  margin: 0px;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.hero h1 strong{
+  color: #456A8C;
+}
+
+.platzi_color{
+  color: #98ca3f !important;
+}
+
+.hero_fig{
+  width: 500px;
+  height: 550px;
+}
+
+.hero_img{
+  display: inline-block;
+  background-position: center;
+  background-position-y: -175px;
+  background-position-x: -230px;
+  background-repeat: no-repeat;
+  background-image: url(../images/hero.jpg);
+  background-size: 1008px 756px;
+  width: 500px;
+  height: 550px;
+  object-fit: cover;
 }
