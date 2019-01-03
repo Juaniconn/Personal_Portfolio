@@ -11,6 +11,7 @@
   </head>
   <body>
     <!-- header -->
+    <i class="icon-menu burger_buttom" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <div class="header_div">
@@ -18,13 +19,13 @@
         </div>
         <ul class="header_nav">
           <li>
-            <a href="#About_Me">About Me</a>
+            <a class="link" href="#About_Me">About Me</a>
           </li>
           <li>
-            <a href="#Certificates">Certificates</a>
+            <a class="link" href="#Certificates">Certificates</a>
           </li>
           <li>
-            <a href="#Projects">Projects</a>
+            <a class="link" href="#Projects">Projects</a>
           </li>
         </ul>
       </div>
@@ -35,8 +36,9 @@
         <h1 class="hero_msg"><span>Hi! I'm <strong>Juan Ponce</strong> <br> Studying
           <strong>Frontend Developer</strong> in <strong class="platzi_color">@Platzi</strong>
           with passion for a <strong>new technologies</strong></h1></span>
-        <div class="hero_img">
-      </div>
+        <div class="hero_img_container">
+          <div class="hero_img"></div>
+        </div>
       </div>
     </section>
     <!-- certificates -->
@@ -133,13 +135,13 @@
           </form>
           <div class="social">
             <!-- twitter -->
-            <a href="https://twitter.com/eljuanii00" class="social_link twitter"></a>
+            <a href="https://twitter.com/eljuanii00" class="social_link icon-twitter"></a>
             <!-- github -->
-            <a href="https://github.com/eljuanii00" class="social_link github"></a>
+            <a href="https://github.com/eljuanii00" class="social_link icon-github"></a>
             <!-- instagram -->
-            <a href="https://www.instagram.com/eljuanii00" class="social_link instagram"></a>
+            <a href="https://www.instagram.com/eljuanii00" class="social_link icon-instagram"></a>
             <!-- linkedin -->
-            <a href="https://www.linkedin.com/in/eljuanii00" class="social_link linkedin"></a>
+            <a href="https://www.linkedin.com/in/eljuanii00" class="social_link icon-linkedin"></a>
           </div>
         </div>
       </div>
@@ -148,12 +150,38 @@
     <footer class="footer">
       <div class="container">
         <p>Juan Ponce Website <img src="images/favicon_white.png" alt=""> </p>
-        <p class="thanks">Icons made by <a class="author_link" href="https://www.flaticon.com/authors/dave-gandy" target="_blank">Dave Gandy</a>,
-          <a class="author_link" href="https://www.flaticon.com/authors/pixel-perfect" target="_blank">Pixel Perfect</a>,
-          <a class="author_link" href="https://www.flaticon.com/authors/simpleicon" target="_blank">SimpleIcon</a>,
-          <a class="author_link" href="https://www.flaticon.com/authors/lucy-g" target="_blank">Lucy G</a>, from
-          <a class="author_link"href="https://www.flaticon.com">www.flaticon.com</a> </p>
       </div>
     </footer>
+    <script>
+      // console.log("Hola mundo! mi primera linea en JS")
+      const ipad = window.matchMedia('screen and (max-width: 420px)');
+      const menu = document.querySelector('.header_nav');
+      // console.log(menu);
+      const burgerButton =  document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+      const links = document.querySelectorAll('.link');
+
+      ipad.addListener(validation)
+      function validation(event){
+        if(event.matches){
+          burgerButton.addEventListener('click', hideShow )
+          Array.from(links).forEach( link=> {
+          link.addEventListener('click',hideShow)
+        })
+        } else {
+          burgerButton.removeEventListener('click', hideShow )
+        }
+        console.log(event.matches);
+      }
+
+      validation(ipad);
+      function hideShow(){
+        if (menu.classList.contains("is-active")){
+            menu.classList.remove('is-active');
+        }else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
   </body>
 </html>

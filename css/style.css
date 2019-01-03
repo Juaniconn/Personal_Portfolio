@@ -24,6 +24,51 @@ header, .hero{
   background-color: #284B63;
 }
 
+/* fonts icons */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?g5gh6j');
+  src:  url('../fonts/icomoon.eot?g5gh6j#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?g5gh6j') format('truetype'),
+    url('../fonts/icomoon.woff?g5gh6j') format('woff'),
+    url('../fonts/icomoon.svg?g5gh6j#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+.icon-facebook2:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e903";
+}
+.icon-github:before {
+  content: "\e904";
+}
+.icon-linkedin:before {
+  content: "\e905";
+}
                     /* flex */
 
 .header, .certificates_div, .projects_div, .footer{
@@ -139,6 +184,7 @@ header, .hero{
   width: 500px;
   height: 550px;
   object-fit: cover;
+  top: 0;
 }
 
 
@@ -146,7 +192,7 @@ header, .hero{
 
 .certificates h2{
   margin: 50px 0px 0px 0px;
-  font-size: 80px;
+  font-size: 60px;
   color: white;
 }
 
@@ -170,7 +216,7 @@ header, .hero{
                     /* projects */
 .projects h2{
   color: #3C6E71;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   margin: 50px 0px 0px 0px;
 }
@@ -320,15 +366,6 @@ margin: 50px 0px;
   background-image: url(../images/svg/envelope.svg);
 }
 
-.social_link{
-  width: 100px;
-  height: 100px;
-  background-position: center;
-  background-size: 100px 100px;
-  display: inline-block;
-  background-repeat: no-repeat;
-}
-
 .social{
   display: flex;
   justify-content: space-around;
@@ -340,17 +377,10 @@ margin: 50px 0px;
   /* padding: 50px 0px; */
 }
 
-.twitter{
-  background-image: url(../images/svg/twitter-logo.svg);
-}
-.github{
-  background-image: url(../images/svg/github-logo.svg);
-}
-.instagram{
-  background-image: url(../images/svg/instagram-logo.svg);
-}
-.linkedin{
-  background-image: url(../images/svg/linkedin-logo.svg);
+.social_link{
+  text-decoration: none;
+  font-size: 100px;
+  color: white;
 }
 
                     /* footer */
@@ -424,23 +454,157 @@ margin: 50px 0px;
     font-size: 1em;
   }
 
-  .form h3{
-    font-size: 4em;
+  .certificates_div figure{
+    width: 49%;
   }
 
-  .social_link{
-    width: 4em;
-    height: 4em;
-    background-size: 4em 4em;
+  .form h3{
+    font-size: 4em;
   }
 
   .footer{
     justify-content: center;
   }
+
+  .social_link{
+    font-size: 5em;
+  }
+
 }
 
 @media screen and (max-width: 420px){
+  .header_div{
+    display: none;
+  }
 
+  .header{
+    flex-direction: column;
+  }
+
+  .header_div{
+    margin: 0 auto;
+  }
+
+  .header_nav{
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    right: -100vw;
+    transition: .3s;
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(53, 53, 53, 0.8);
+    z-index: 2;
+  }
+
+  .header_nav.is-active{
+    right: 0;
+  }
+
+  .header_nav li{
+    margin: 2em;
+  }
+
+  .header_nav li a{
+    font-size: 2em;
+  }
+
+
+  .hero h1{
+    font-size: 2em;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 7em;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .hero{
+    flex-direction: column;
+  }
+
+  .hero_img{
+    right: auto;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-position-x: -300px;
+    background-position-y: -210px;
+    background-size: 450%;
+    margin-top: 2em;
+    /* bottom: 0; */
+    /* background-position: bottom; */
+  }
+
+  .hero_img_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .burger_buttom{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(27, 33, 39, .8);
+    display: none;
+    color: white;
+    line-height: 80px;
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    right: 10px;
+    top: 10px;
+    display: block;
+    font-size: 2em;
+  }
+
+  .certificates h2, .projects h2{
+    font-size: 2em;
+    margin-top: 1em;
+  }
+
+  .certificates_div figure{
+    width: 100%;
+    margin: 2em 0em;
+  }
+
+  .project_section{
+    width: 100%;
+  }
+
+  .projects_div{
+    margin-top: 2em;
+  }
+
+  .contact{
+    flex-direction: column;
+  }
+
+  .form{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2em;
+  }
+
+  .social{
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .contact_container{
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .social_link{
+    font-size: 3.5em;
+  }
 }
 
 @media screen and (max-width: 320px){
