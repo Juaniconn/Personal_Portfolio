@@ -71,13 +71,21 @@ header, .hero{
 }
                     /* flex */
 
-.header, .certificates_div, .projects_div, .footer{
+.header, .projects_div, .footer{
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+ .certificates_div{
+   display: flex;
+   justify-content: space-around;
+   /* align-items: center; */
+   flex-wrap: wrap;
+   flex-direction: row;
+ }
 
 .hero{
   display: flex;
@@ -405,7 +413,9 @@ margin: 50px 0px;
 }
 
 @media screen and (min-width: 1024px){
-
+  .burger_buttom{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px){
