@@ -1,0 +1,36 @@
+/* fonts */
+body{
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: "Lato", sans-serif;
+}
+
+.nav{
+  font-family: "Lato", sans-serif;
+}
+
+
+/* contact left */
+.code-tag::after{
+  content: ">";
+}
+
+.code-tag::before{
+  content: "<";
+}
+
+.code.line1, .code.line3, .code.line5{
+  margin-left: 22px;
+}
+
+.code.line2, .code.line4{
+  margin-left: 62px;
+}
+
+/* contact right */
+.hearth{
+  color: red;
+}
