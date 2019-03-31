@@ -1,0 +1,33 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Juan Ponce Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElJuanii00/Personal-Portfolio.git"
+  },
+  "author": "Juan Ponce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElJuanii00/Personal-Portfolio/issues"
+  },
+  "homepage": "https://github.com/ElJuanii00/Personal-Portfolio#readme",
+  "devDependencies": {
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "postcss-apply": "^0.12.0",
+    "postcss-custom-media": "^7.0.7",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.6.0",
+    "stylelint": "^9.10.1"
+  },
+  "dependencies": {
+    "postcss-cli": "^6.1.2"
+  }
+}
