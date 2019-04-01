@@ -1,8 +1,228 @@
 /* vars */
+:root{
+    /*Space*/
+
+  /*Social width and height*/
+
+  /*Colors*/
+}
 /* fonts */
+body{
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?fp72x3');
+  src:  url('../fonts/icomoon.eot?fp72x3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?fp72x3') format('truetype'),
+    url('../fonts/icomoon.woff?fp72x3') format('woff'),
+    url('../fonts/icomoon.svg?fp72x3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-file-text:before {
+  content: "\e922";
+}
+.icon-stack:before {
+  content: "\e92e";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-git:before {
+  content: "\eae7";
+}
 /* basics */
+html{
+  font-size: 10px;
+}
+body{
+  margin: 0;
+  font-size: 10px;
+}
+*{
+  box-sizing: border-box;
+}
 /* header */
+.header{
+  display: inline-block;
+  width: 100%;
+  height: calc(20px * 5);
+  position: fixed;
+  padding: 2rem 2rem 0 0;
+}
+.hamburger_menu{
+  float: right;
+  cursor: pointer;
+  font-size: 4rem;
+  color: white;
+  height: 4rem;
+  width: 4rem;
+}
+.nav_wrapper{
+  float: left;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  margin-left: 15rem;
+}
+.nav_wrapper ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  /* width: 21rem; */
+  height: 50rem;
+}
+.nav_wrapper h1{
+  color: #7CB6D1;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+.nav_list{
+  display: block;
+  list-style: none;
+}
+.nav_item{
+  font-size: 4rem;
+  color: #E8E9E8;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 /* hero */
+.hero{
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.hero_logo{
+  float: top;
+  width: auto;
+  height: 5rem;
+  margin: 2rem 0 0 2rem;
+  grid-area: hero_logo;
+}
+.hero_info{
+  grid-area: hero_info;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10rem;
+}
+.hero_container{
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,.7), rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(0,0,0,.7), rgba(0,0,0,1));
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 90px 1fr;
+  grid-template-areas: "hero_logo"
+                       "hero_info"
+}
+.hero_message h1, .hero_message p{
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+}
+.hero_button{
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #E8E9E8;
+  color: #E8E9E8;
+  text-decoration: none;
+  /* margin-top: 100px; */
+}
+.hero_button:hover{
+  transition: 0.5s;
+  background-color: white;
+  color: #222322;
+}
+.hero_message h1{
+  font-size: 3rem;
+  color: #888988;
+}
+.hero_message p{
+  font-size: 4rem;
+  color: #E8E9E8;
+}
+.hero_calltoaction{
+  margin: 70px 0 70px;
+}
+.hero_social{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+}
+.social{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #E8E9E8;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #E8E9E8;
+  margin: 0 0 50px 0;
+}
+.social:not(:last-child){
+  margin-right: 2rem;
+}
+/* about me */
+.about_me{
+  width: 100%;
+  height: 500px;
+  background-color: #222322;
+}
 /* projects */
 /* contact */
 /* footer */

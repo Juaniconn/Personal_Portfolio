@@ -1,1 +1,13 @@
 /* basics */
+html{
+  font-size: 10px;
+}
+
+body{
+  margin: 0;
+  font-size: 10px;
+}
+
+*{
+  box-sizing: border-box;
+}

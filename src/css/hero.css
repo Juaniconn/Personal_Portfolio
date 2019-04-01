@@ -1,1 +1,98 @@
 /* hero */
+.hero{
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero_logo{
+  float: top;
+  width: auto;
+  height: 5rem;
+  margin: 2rem 0 0 2rem;
+  grid-area: hero_logo;
+}
+
+.hero_info{
+  grid-area: hero_info;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10rem;
+}
+
+.hero_container{
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,.7), rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(0,0,0,.7), rgba(0,0,0,1));
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 90px 1fr;
+  grid-template-areas: "hero_logo"
+                       "hero_info"
+}
+
+.hero_message h1, .hero_message p{
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+}
+
+:--calltoaction{
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--gray_scale1);
+  color: var(--gray_scale1);
+  text-decoration: none;
+  /* margin-top: 100px; */
+}
+
+:--calltoaction:--CTA_hover{
+  transition: 0.5s;
+  background-color: white;
+  color: var(--gray_scale3);
+}
+
+.hero_message h1{
+  font-size: 3rem;
+  color: var(--gray_scale2);
+}
+
+.hero_message p{
+  font-size: 4rem;
+  color: var(--gray_scale1);
+}
+
+.hero_calltoaction{
+  margin: 70px 0 70px;
+}
+
+.hero_social{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+}
+
+.social{
+  display: inline-block;
+  width: var(--social_width);
+  height: var(--social_height);
+  border: 2px solid var(--gray_scale1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--gray_scale1);
+  margin: 0 0 50px 0;
+}
+
+.social:not(:last-child){
+  margin-right: 2rem;
+}

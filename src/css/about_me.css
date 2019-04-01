@@ -1,0 +1,6 @@
+/* about me */
+.about_me{
+  width: 100%;
+  height: 500px;
+  background-color: var(--gray_scale3);
+}
