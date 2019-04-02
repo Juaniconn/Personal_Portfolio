@@ -11,6 +11,16 @@
   --gray_scale2: #888988;
   --gray_scale3: #222322;
   --color_brand: #7CB6D1;
+
+  --icon_services{
+    grid-area: icon_menu;
+    width: 6rem;
+    height: 6rem;
+    font-size: 6rem;
+    text-align: center;
+    color: var(--gray_scale1);
+    margin-right: 5rem;
+  };
 }
 
 @custom-selector :--calltoaction .hero_button, .aboutme_button, .projectscontent_button;

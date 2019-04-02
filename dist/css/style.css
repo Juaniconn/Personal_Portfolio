@@ -316,6 +316,7 @@ h1, h2, h3, h4, h5, h6, p{
   grid-template-rows: auto 1fr;
   background-color: #E8E9E8;
   padding: 10rem 0 10rem 0;
+  position: relative;
 }
 .projects_info{
   display: flex;
@@ -323,6 +324,25 @@ h1, h2, h3, h4, h5, h6, p{
   align-items: center;
   flex-direction: column;
   margin-bottom: 10rem;
+}
+.projects_backgroundBottom{
+  height: 300px;
+  width: 100%;
+  background-color: #222322;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+.projects_backgroundBottom::before{
+  content: "";
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #888988;
 }
 .projects_info h1{
   color: #7CB6D1;
@@ -342,6 +362,9 @@ h1, h2, h3, h4, h5, h6, p{
   width: 100%;
   flex-wrap: wrap;
   /* margin-bottom: 15rem; */
+  width: 80%;
+  margin: 0 auto;
+  z-index: 1;
 }
 .projects_fig{
   background-image: url(../images/projects_background.png);
@@ -361,6 +384,77 @@ h1, h2, h3, h4, h5, h6, p{
   position: absolute;
   right: calc(50% - 100px);
   top: 80%;
+}
+/* services */
+.services{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1130px;
+  background-color: #222322;
+  height: 100%;
+  padding: 10rem 0 10rem 0;
+}
+.services_info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10rem
+}
+.services_info h1{
+    font-size: 3rem;
+    color: #7CB6D1;
+  }
+.services_info p{
+    font-size: 4rem;
+    color: #E8E9E8;
+    font-weight: bold;;
+  }
+.services_content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 70%;
+  justify-self: center;
+}
+.services_item{
+  display: grid;
+  grid-template-columns: 110px 400px;
+  grid-template-rows: 60px 250px;
+  grid-template-areas: "icon_menu serv_itemTitle"
+                       ". serv_itemInfo"
+}
+.services_item i{
+  grid-area: icon_menu;
+  width: 6rem;
+  height: 6rem;
+  font-size: 6rem;
+  text-align: center;
+  color: #E8E9E8;
+  margin-right: 5rem;
+  }
+.services_item .icon_postcss{
+  grid-area: icon_menu;
+  width: 6rem;
+  height: 6rem;
+  font-size: 6rem;
+  text-align: center;
+  color: #E8E9E8;
+  margin-right: 5rem;
+  }
+.services_item h2{
+    grid-area: serv_itemTitle;
+    color: #7CB6D1;
+    font-size: 3rem;
+  }
+.services_item p{
+    grid-area: serv_itemInfo;
+    color: #E8E9E8;
+    font-size: 2rem;
+    width: 80%;
+  }
+.services_item:not(:last-child):not(:nth-child(5)){
+  margin-bottom: 100px;
 }
 /* contact */
 /* footer */
