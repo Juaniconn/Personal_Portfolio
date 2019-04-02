@@ -1,11 +1,4 @@
 /* vars */
-:root{
-    /*Space*/
-
-  /*Social width and height*/
-
-  /*Colors*/
-}
 /* fonts */
 body{
   font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
@@ -77,6 +70,23 @@ body{
 *{
   box-sizing: border-box;
 }
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+.hero_button,.aboutme_button{
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #E8E9E8;
+  color: #E8E9E8;
+  text-decoration: none;
+  /* margin-top: 100px; */
+}
+.hero_button:hover,.aboutme_button:hover{
+  transition: 0.5s;
+  background-color: white;
+  color: #222322;
+}
 /* header */
 .header{
   display: inline-block;
@@ -137,7 +147,7 @@ body{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 770px;
 }
 .hero_logo{
   float: top;
@@ -166,25 +176,10 @@ body{
 }
 .hero_message h1, .hero_message p{
   text-align: left;
-  margin: 0;
   font-weight: bold;
 }
-.hero_button{
-  font-size: 2rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid #E8E9E8;
-  color: #E8E9E8;
-  text-decoration: none;
-  /* margin-top: 100px; */
-}
-.hero_button:hover{
-  transition: 0.5s;
-  background-color: white;
-  color: #222322;
-}
 .hero_message h1{
-  font-size: 3rem;
+  font-size: 2rem;
   color: #888988;
 }
 .hero_message p{
@@ -193,6 +188,10 @@ body{
 }
 .hero_calltoaction{
   margin: 70px 0 70px;
+  /* width: 100%; */
+}
+.hero_button:not(:last-child){
+  margin-right: 2rem;
 }
 .hero_social{
   display: flex;
@@ -208,11 +207,18 @@ body{
   border: 2px solid #E8E9E8;
   border-radius: 50%;
   text-align: center;
-  line-height: 50px;
+  /* line-height: 50px; */
   text-decoration: none;
   font-size: 3rem;
   color: #E8E9E8;
   margin: 0 0 50px 0;
+}
+.social::before{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .social:not(:last-child){
   margin-right: 2rem;
@@ -220,8 +226,71 @@ body{
 /* about me */
 .about_me{
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-color: #222322;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+}
+.aboutme_leftside, .aboutme_rightside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutme_leftside h1, .aboutme_rightside p{
+  font-weight: bold;
+  font-size: 3rem;
+  color: #888988;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.aboutme_leftside h1::after{
+  position: absolute;
+  content: "";
+  width: 8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 2px;
+  background-color: #888988;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+.aboutme_leftside p:nth-child(2){
+  font-size: 4rem;
+  font-weight: bold;
+  color: #7CB6D1;
+  margin-bottom: 4rem;
+}
+.aboutme_message{
+  font-size: 2rem;
+  color: #E8E9E8;
+  width: 65%;
+  text-align: center;
+}
+.aboutme_message:not(:last-child){
+  margin-bottom: 4rem;
+}
+.aboutme_rightside{
+  position: relative;
+}
+.aboutme_rightside::after{
+  content: "";
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  /* background-color: var(--gray_scale1); */
+  border-left: 2px solid #888988;
+  box-sizing: border-box;
+}
+.aboutme_certificate{
+  width: 50rem;
+  box-shadow: 2px 2px 15px 0px rgba(232,233,232,1);
+}
+.aboutme_button{
+  margin-top: 3rem;
 }
 /* projects */
 /* contact */

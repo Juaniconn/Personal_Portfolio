@@ -1,20 +1,17 @@
 /* vars */
 :root{
-    /*Space*/
   --minspace: 10px;
   --midspace: 20px;
   --largspace: 30px;
 
-  /*Social width and height*/
   --social_width: 50px;
   --social_height: 50px;
 
-  /*Colors*/
   --gray_scale1: #E8E9E8;
   --gray_scale2: #888988;
   --gray_scale3: #222322;
   --color_brand: #7CB6D1;
 }
 
-@custom-selector :--calltoaction .hero_button;
+@custom-selector :--calltoaction .hero_button, .aboutme_button;
 @custom-selector :--CTA_hover :hover;

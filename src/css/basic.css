@@ -11,3 +11,23 @@ body{
 *{
   box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+
+:--calltoaction{
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--gray_scale1);
+  color: var(--gray_scale1);
+  text-decoration: none;
+  /* margin-top: 100px; */
+}
+
+:--calltoaction:--CTA_hover{
+  transition: 0.5s;
+  background-color: white;
+  color: var(--gray_scale3);
+}
