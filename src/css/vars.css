@@ -13,5 +13,7 @@
   --color_brand: #7CB6D1;
 }
 
-@custom-selector :--calltoaction .hero_button, .aboutme_button;
+@custom-selector :--calltoaction .hero_button, .aboutme_button, .projectscontent_button;
+@custom-selector :--projects_button .projectscontent_button;
 @custom-selector :--CTA_hover :hover;
+@custom-selector :--projects_buttonHover :hover;
