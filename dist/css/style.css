@@ -611,3 +611,31 @@ h1, h2, h3, h4, h5, h6, p{
   margin-right: 1rem;
 }
 /* footer */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem 4rem;
+  background-color: #222322;
+}
+.footer_leftSide{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 280px
+}
+.footer_leftSide img{
+    height: 5rem;
+  }
+.footer_leftSide h1{
+    display: inline;
+    font-size: 1.5rem;
+    width: auto;
+    color: #E8E9E8;
+  }
+.footer_rightSide h1{
+    font-size: 1.5rem;
+    color: #E8E9E8;
+  }
