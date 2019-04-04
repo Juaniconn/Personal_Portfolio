@@ -21,9 +21,25 @@
     color: var(--gray_scale1);
     margin-right: 5rem;
   };
+
+  --social_hover{
+    background-color: var(--gray_scale1);
+    color: var(--gray_scale3);
+  }
+
+  --contact_button{
+    background-color: transparent;
+    border: 2px solid var(--gray_scale1);
+    color: var(--gray_scale1);
+    padding: 1rem 3rem;
+    /*transition: 0.5s;*/
+    outline: none;
+    cursor: pointer;
+  };
 }
 
 @custom-selector :--calltoaction .hero_button, .aboutme_button, .projectscontent_button;
+@custom-selector :--calltoactions .hero_button, .aboutme_button, .projectscontent_button;
 @custom-selector :--projects_button .projectscontent_button;
 @custom-selector :--CTA_hover :hover;
 @custom-selector :--projects_buttonHover :hover;

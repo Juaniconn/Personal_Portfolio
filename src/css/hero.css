@@ -29,6 +29,7 @@
   width: 100%;
   height: 100%;
   display: grid;
+  padding: 0 0 10rem 0;
   grid-template-columns: 600px;
   grid-template-rows: 90px 1fr;
   grid-template-areas: "hero_logo"
@@ -78,7 +79,15 @@
   text-decoration: none;
   font-size: 3rem;
   color: var(--gray_scale1);
-  margin: 0 0 50px 0;
+  /* margin: 0 0 50px 0; */
+}
+
+.social::before{
+  transition: 0.5s;
+}
+
+.social:hover{
+  @apply --social_hover;
 }
 
 .social::before{

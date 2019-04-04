@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 :--projects_button:--projects_buttonHover{
-  transition: 0.5s;
+  /*transition: 0.5s;*/
   background-color: transparent;
   color: var(--gray_scale1);
 }

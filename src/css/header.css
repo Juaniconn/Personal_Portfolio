@@ -6,6 +6,7 @@
   height: calc(var(--midspace) * 5);
   position: fixed;
   padding: 2rem 2rem 0 0;
+  z-index: 2;
 }
 
 .hamburger_menu{
