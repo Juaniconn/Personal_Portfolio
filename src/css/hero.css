@@ -33,7 +33,10 @@
   grid-template-columns: 600px;
   grid-template-rows: 90px 1fr;
   grid-template-areas: "hero_logo"
-                       "hero_info"
+                       "hero_info";
+  & a{
+    z-index: 2;
+  }
 }
 
 .hero_message h1, .hero_message p{
