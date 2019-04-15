@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 /* hero */
 .hero{
-  background-image: url(../images/hero.jpg);
+  background-image: url(../images/background_hero.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -290,11 +290,8 @@ h1, h2, h3, h4, h5, h6, p{
   grid-template-columns: 600px;
   grid-template-rows: 90px 1fr;
   grid-template-areas: "hero_logo"
-                       "hero_info"
+                       "hero_info";
 }
-.hero_container a{
-    z-index: 2;
-  }
 .hero_message h1, .hero_message p{
   text-align: left;
   font-weight: bold;
@@ -363,21 +360,25 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .aboutme_leftside, .aboutme_rightside{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: column;
 }
-.aboutme_leftside h1, .aboutme_rightside p{
+.aboutme_leftside p{
+    margin: 0 auto;
+  }
+.aboutme_leftside h1, .aboutme_rightside h1{
   font-weight: bold;
   font-size: 3rem;
-  color: #888988;
+  color: #7CB6D1;
   margin-bottom: 3rem;
   position: relative;
+  margin: 0 auto 2rem auto;
 }
-.aboutme_leftside h1::after{
+.aboutme_leftside h1::after, .aboutme_rightside h1::after{
   position: absolute;
   content: "";
-  width: 8rem;
+  width: 5rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -387,12 +388,27 @@ h1, h2, h3, h4, h5, h6, p{
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 }
-.aboutme_leftside p:nth-child(2){
+.aboutme_rightside{
+  padding-left: 8rem
+}
+.aboutme_rightside h2{
+    color: #7CB6D1;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+.aboutme_rightside p{
+    font-size: 2rem;
+    color: #E8E9E8;
+  }
+.aboutme_rightside p:not(:last-child){
+    margin-bottom: 1rem;
+  }
+/* .aboutme_leftside p:nth-child(2){
   font-size: 4rem;
   font-weight: bold;
-  color: #7CB6D1;
+  color: var(--color_brand);
   margin-bottom: 4rem;
-}
+} */
 .aboutme_message{
   font-size: 2rem;
   color: #E8E9E8;
@@ -413,6 +429,8 @@ h1, h2, h3, h4, h5, h6, p{
   /* background-color: var(--gray_scale1); */
   border-left: 2px solid #888988;
   box-sizing: border-box;
+  left: 0;
+  top: calc(50% - 40%);
 }
 .aboutme_certificate{
   width: 50rem;

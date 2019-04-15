@@ -23,5 +23,6 @@ module.exports = {
       stage: 1,
     }),
     require('css-mqpacker'),
+    // require("cssnano")
   ]
 }
