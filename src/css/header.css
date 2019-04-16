@@ -3,7 +3,7 @@
 .header{
   display: inline-block;
   width: 100%;
-  height: calc(var(--midspace) * 5);
+  /* height: calc(var(--midspace) * 5); */
   position: fixed;
   z-index: 2;
   /* position: absolute; */
@@ -30,9 +30,39 @@
 }
 
 .nav_item{
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--gray_scale1);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media (--extra-small) {
+  .nav_wrapper{
+    align-items: center;
+
+    padding: 4rem;
+
+    & h1{
+      font-size: 2.5rem;
+    }
+
+    & .nav_item{
+      font-size: 2rem;
+    }
+
+    & ul{
+      justify-content: flex-end;
+    }
+
+    & ul li:not(:last-child){
+      margin-bottom: 5rem;
+    }
+
+    & h1, & ul{
+      width: 100%;
+      /* align-items: flex-start; */
+      text-align: left;
+    }
+  }
 }

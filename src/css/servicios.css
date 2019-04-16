@@ -31,9 +31,9 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 70%;
   justify-self: center;
 }
+
 
 .services_item{
   display: grid;
@@ -46,7 +46,7 @@
     @apply --icon_services;
   }
 
-  & .icon_postcss{
+  & img{
     @apply --icon_services;
   }
 
@@ -66,4 +66,153 @@
 
 .services_item:not(:last-child):not(:nth-child(5)){
   margin-bottom: 100px;
+}
+
+@media (--extra-small) {
+  .services{
+    padding: 5rem 0;
+    grid-template-rows: auto auto;
+  }
+
+  .services_info{
+    margin-bottom: 5rem;
+    & h1{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    & p{
+      font-size: 2.5rem;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .services_content{
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+
+  .services_item{
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 5rem !important;
+
+    & h2{
+      font-size: 2.5rem;
+      /* align-self: center; */
+    }
+
+    & p{
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    & i{
+      margin: 0;
+    }
+  }
+}
+
+@media (--small){
+  .services{
+    padding: 5rem 0;
+    grid-template-rows: auto auto;
+  }
+
+  .services_info{
+    margin-bottom: 5rem;
+    & h1{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    & p{
+      font-size: 2.5rem;
+    }
+  }
+
+  .services_content{
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+
+  .services_item{
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 5rem !important;
+
+    & h2{
+      font-size: 2.5rem;
+      /* align-self: center; */
+    }
+
+    & p{
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    & i{
+      margin: 0;
+    }
+  }
+}
+
+@media (--medium-portrait){
+  .services{
+    grid-template-rows: auto auto;
+    padding: 7.5rem 0;
+
+    & .services_info{
+      margin-bottom: 7.5rem;
+    }
+  }
+  .services_content{
+    grid-template-columns: 1fr;
+  }
+
+  .services_item{
+    grid-template-rows: auto auto;
+  }
+
+  .services_item:not(:last-child){
+    margin-bottom: 5rem !important;
+  }
+
+  .services_info p{
+    font-size: 3.5rem;
+  }
+
+  .services_item{
+    & h2{
+      font-size: 2.5rem;
+    }
+
+    & p{
+      font-size: 2rem;
+      width: 100%;
+    }
+
+    & i{
+      margin: 0;
+    }
+
+    & img{
+      margin: 0;
+    }
+  }
+}
+
+@media (--large){
+  .services_content{
+    width: 90%;
+  }
+
+  .services_item{
+    grid-template-columns: 110px 1fr;
+    & p{
+      width: 90%;
+    }
+  }
 }

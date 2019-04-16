@@ -18,7 +18,7 @@
   & img{
     height: 5rem;
   }
-  & h1{
+  & p{
     display: inline;
     font-size: 1.5rem;
     width: auto;
@@ -27,8 +27,53 @@
 }
 
 .footer_rightSide{
-  & h1{
+  & p{
     font-size: 1.5rem;
     color: var(--gray_scale1);
+  }
+}
+@media (--extra-small){
+  .footer{
+    padding: 2rem;
+  }
+  .footer_leftSide{
+    width: auto;
+    & a img{
+      height: 3rem;
+    }
+
+    & p{
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .footer_rightSide{
+    & p{
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (--small){
+  .footer{
+    padding: 2rem;
+  }
+  .footer_leftSide{
+    width: auto;
+    & a img{
+      height: 3rem;
+    }
+
+    & p{
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .footer_rightSide{
+    & p{
+      font-size: 1rem;
+    }
   }
 }

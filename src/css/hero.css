@@ -30,7 +30,7 @@
   height: 100%;
   display: grid;
   padding: 0 0 10rem 0;
-  grid-template-columns: 600px;
+  grid-template-columns: 1fr;
   grid-template-rows: 90px 1fr;
   grid-template-areas: "hero_logo"
                        "hero_info";
@@ -100,4 +100,80 @@
 
 .social:not(:last-child){
   margin-right: 2rem;
+}
+
+@media (--extra-small) {
+  .hero_info{
+    margin-left: 0rem;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero_calltoaction, .hero_message{
+    width: 100%;
+  }
+
+  .hero_message h1{
+    font-size: 2rem
+  }
+
+  .hero_message p{
+    font-size: 2.5rem;
+  }
+
+  .hero_calltoaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3rem 0;
+    height: 12rem;
+  }
+
+  .hero_button:not(:last-child){
+    margin-right: 0rem;
+  }
+
+  .hero_container{
+    padding-bottom: 7.5rem;
+  }
+
+  .hero_social{
+    width: 100%;
+  }
+}
+
+@media (--small){
+  .hero_info{
+    margin-left: 5rem;
+  }
+
+  .hero_message p{
+    font-size: 3rem;
+  }
+
+  .hero_calltoaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3rem 0;
+    height: 12rem;
+  }
+
+  .hero_button:not(:last-child){
+    margin-right: 0rem;
+  }
+
+  .hero_container{
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (--medium-portrait) {
+  .hero_container{
+    padding-bottom: 7.5rem;
+  }
 }
