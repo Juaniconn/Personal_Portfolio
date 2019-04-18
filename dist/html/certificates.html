@@ -4,9 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/certificates.css">
+  <link rel="stylesheet" href="../css/lightbox.min.css">
+  <script src="../js/lightbox-plus-jquery.min.js"></script>
+  <!-- <script type="text/javascript">
+    lightbox.option({
+      'disableScrolling': false
+    })
+  </script> -->
+  <title>Certificates</title>
 </head>
 <body>
-
+  <header class="header">
+    <nav>
+      <i id="nav_btn" class="nav_btn icon-menu"></i>
+      <div id="nav_wrapper" class="nav_wrapper">
+        <h1>Navegación</h1>
+        <ul>
+          <li class="nav_list">
+              <a class="nav_item" href="../../index.html#about_me">Sobre Mi</a>
+          </li>
+          <li class="nav_list">
+              <a class="nav_item" href="#">Certificates</a>
+          </li>
+          <li class="nav_list">
+            <a class="nav_item" href="../../index.html#projects">Proyectos</a>
+          </li>
+          <li class="nav_list">
+            <a class="nav_item" href="../../index.html#services">Servicios</a>
+          </li>
+          <li class="nav_list">
+            <a class="nav_item" href="../../index.html#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="certificates">
+    <a class="logo" href="https://eljuanii00.github.io/Personal_Portfolio/"><img class="hero_logo" src="../images/logo.png" alt=""></a>
+    <h1>Certificates</h1>
+    <div class="certificates_container">
+      <div class="certificates_div certificates_carrer">
+        <h2>Career</h2>
+        <a data-lightbox="mygallery" data-title="Frontend Architect" href="../images/certificates/diploma-arquitecto.png"><img src="../images/certificates/diploma-arquitecto.png" alt="" width="500"></a>
+      </div>
+      <div class="certificates_div certificates_frontDev">
+        <h2>Frontend Developer</h2>
+        <a data-lightbox="mygallery" data-title="Advanced Web" href="../images/certificates/diploma-web-avanzado.png"><img src="../images/certificates/diploma-web-avanzado.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Web Animations" href="../images/certificates/diploma-animaciones-web.png"><img src="../images/certificates/diploma-animaciones-web.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Css Grid Layout" href="../images/certificates/diploma-css-grid-layout.png"><img src="../images/certificates/diploma-css-grid-layout.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Responsive Design" href="../images/certificates/diploma-responsive-design.png"><img src="../images/certificates/diploma-responsive-design.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Online Web Development" href="../images/certificates/diploma-html5-css3.png"><img src="../images/certificates/diploma-html5-css3.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Git-Github" href="../images/certificates/diploma-git-github.png"><img src="../images/certificates/diploma-git-github.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="terminal and Command Line" href="../images/certificates/diploma-terminal.png"><img src="../images/certificates/diploma-terminal.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Web Page Optimization" href="../images/certificates/diploma-optimizacion-web.png"><img src="../images/certificates/diploma-optimizacion-web.png" alt="" width="500"></a>
+      </div>
+      <div class="certificates_div certificates_courseComp">
+        <h2>Complementary Courses</h2>
+        <a data-lightbox="mygallery" data-title="Design System" href="../images/certificates/diploma-sistemas-diseno.png"><img src="../images/certificates/diploma-sistemas-diseno.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="How to work as Freelance" href="../images/certificates/diploma-trabajar-freelance.png"><img src="../images/certificates/diploma-trabajar-freelance.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Basic Progr" href="../images/certificates/diploma-programacion-basica.png"><img src="../images/certificates/diploma-programacion-basica.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Introductory Programming" href="../images/certificates/diploma-marca-personal.png"><img src="../images/certificates/diploma-marca-personal.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Fundamentals Engineer" href="../images/certificates/diploma-ingenieria.png"><img src="../images/certificates/diploma-ingenieria.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Fundamentals Design" href="../images/certificates/diploma-fundamentos-diseno.png"><img src="../images/certificates/diploma-fundamentos-diseno.png" alt="" width="500"></a>
+        <a data-lightbox="mygallery" data-title="Adobe XD" href="../images/certificates/diploma-adobe-xd.png"><img src="../images/certificates/diploma-adobe-xd.png" alt="" width="500"></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer_leftSide">
+      <a href="https://eljuanii00.github.io/Personal_Portfolio/"><img src="../images/logo.png" alt=""></a>
+      <p>Desarrollador Web Freelance</p>
+    </div>
+    <div class="footer_rightSide">
+      <p>© Copyright Juan Ponce 2019</p>
+    </div>
+  </footer>
 </body>
+<script type="text/javascript">
+  const $nav_btn = document.getElementById('nav_btn');
+  const $nav_wrapper = document.getElementById('nav_wrapper');
+  const $nav_item = document.getElementsByClassName('nav_item');
+
+  $nav_btn.addEventListener('click', (event) => {
+    if($nav_wrapper.classList.contains('fadeInLeft') == false && $nav_wrapper.classList.contains('fadeOutRight') == false){
+      $nav_wrapper.classList.add('fadeInLeft');
+    } else{
+      if($nav_wrapper.classList.contains('fadeInLeft') == false){
+        $nav_wrapper.classList.remove('fadeOutRight');
+        $nav_wrapper.classList.add('fadeInLeft');
+      } else if($nav_wrapper.classList.contains('fadeOutRight') == false){
+        $nav_wrapper.classList.remove('fadeInLeft');
+        $nav_wrapper.classList.add('fadeOutRight');
+      }
+    }
+  })
+  for(let i = 0; i < $nav_item.length; i++) {
+    $nav_item[i].addEventListener('click', (event) => {
+      if($nav_wrapper.classList.contains('fadeOutRight') == false){
+        $nav_wrapper.classList.remove('fadeInLeft');
+        $nav_wrapper.classList.add('fadeOutRight');
+      }
+    })
+  }
+</script>
 </html>
