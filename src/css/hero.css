@@ -1,6 +1,6 @@
 /* hero */
 .hero{
-  background-image: url(../images/background_hero.jpg);
+  background-image: url(../images/background_hero.png);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -30,10 +30,10 @@
   height: 100%;
   display: grid;
   padding: 0 0 10rem 0;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 90px 1fr;
-  grid-template-areas: "hero_logo"
-                       "hero_info";
+  grid-template-areas: "hero_logo ."
+                       "hero_info hero_info";
 }
 
 .hero_message h1, .hero_message p{

@@ -10,19 +10,19 @@ module.exports = {
     require('postcss-custom-media')({
       preserve: false,
     }),
-    require('postcss-font-magician')({
-      variants: {
-        'Lato':{
-          '300': [],
-          '400': [],
-        }
-      }
-    }),
+    // require('postcss-font-magician')({
+    //   variants: {
+    //     'Lato':{
+    //       '300': [],
+    //       '400': [],
+    //     }
+    //   }
+    // }),
     require('postcss-preset-env')({
       preserve: false,
       stage: 1,
     }),
     require('css-mqpacker'),
-    require("cssnano")
+    // require("cssnano")
   ]
 }
