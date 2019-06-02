@@ -42,7 +42,7 @@
   background-color: rgba(34,35,34,0.7);
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  /* min-height: 60rem; */
   flex-direction: column;
   /*opacity: 0.6;*/
   & h2{
@@ -53,10 +53,12 @@
 
 .contact_leftsideInfo{
 
+  margin-top: 3rem;
+
   & h3{
     font-size: 1.5rem;
     color: var(--gray_scale1);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   & p{
@@ -69,6 +71,12 @@
     font-size: 1.5rem;
     color: var(--color_brand);
   }
+
+  & a:nth-of-type(1){
+    text-decoration: none;
+    margin-bottom: 3rem;
+    display: block;
+  }
 }
 
 .contact_rightside{
@@ -80,83 +88,66 @@
     font-size: 2rem;
     color: var(--gray_scale1);
   }
+
+  & .contact_twitter{
+    margin-top: 3rem;
+  }
 }
 
-.contact_rightsideForm{
+.contact_leftsideSocialBot{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 6rem;
-  & label{
-    font-size: 1.5rem;
-    color: var(--gray_scale2);
-    text-align: left;
-    width: 100%;
+  flex-wrap: wrap;
+
+  margin-top: 3rem;
+
+
+  & h2{
+    margin-bottom: 2rem;
+  }
+  
+  & .contact_leftsideSocialInfo{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .social_form{
+      display: inline-block;
+      width: 9rem;
+      height: 9rem;
+      /* border: 2px solid var(--gray_scale1); */
+      /* border-radius: 50%; */
+      text-align: center;
+      /* line-height: 50px; */
+      text-decoration: none;
+      font-size: 5rem;
+      color: var(--gray_scale1);
+      /* margin: 0 0 50px 0; */
+    }
+    
+    & .social_form::before{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      will-change: transition;
+    }
+    
+    & .social_form:hover{
+      @apply --social_hover;
+    }
   }
 
-  & input:not(:last-child), & textarea{
-    color: var(--gray_scale1);
-    /*height: 3rem;*/
-    background-color: transparent !important;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--gray_scale2);
-    width: 100%;
-    padding: 1rem 0 1rem 0;
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
-    resize: none;
-    /*-webkit-text-fill-color: transparent;*/
-  }
-
-  & input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active{
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
-  }
-
-  & input:last-child{
-    @apply --contact_button;
-  }
-
-  & input:last-child:hover{
-    transition: 0.5s;
-    background-color: var(--gray_scale1);
-    color: var(--gray_scale3);
-  }
 }
 
-.social_form{
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid var(--gray_scale1);
-  border-radius: 50%;
-  text-align: center;
-  /* line-height: 50px; */
-  text-decoration: none;
-  font-size: 2rem;
-  color: var(--gray_scale1);
-  /* margin: 0 0 50px 0; */
-}
 
-.social_form::before{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  will-change: transition;
-}
-
-.social_form:hover{
-  @apply --social_hover;
-}
-
-.social_form:not(:last-child){
-  margin-right: 1rem;
-}
 
 @media (--extra-small) {
   .contact{
@@ -200,6 +191,21 @@
 
   .contact_form{
     width: 85%;
+  }
+
+  .contact_leftsideSocialBot{
+    align-items: flex-start;
+    & h2{
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+    & .contact_leftsideSocialInfo{
+      & .social_form{
+        width: 6rem;
+        height: 6rem;
+        font-size: 4rem;
+      }
+    } 
   }
 }
 
@@ -245,6 +251,21 @@
 
   .contact_form{
     width: 85%;
+  }
+
+  .contact_leftsideSocialBot{
+    align-items: flex-start;
+    & h2{
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+    & .contact_leftsideSocialInfo{
+      & .social_form{
+        width: 6rem;
+        height: 6rem;
+        font-size: 4rem;
+      }
+    } 
   }
 }
 
